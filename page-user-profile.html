@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Vuesax admin is super flexible, powerful, clean &amp; modern responsive bootstrap 4 admin template with unlimited possibilities.">
+    <meta name="keywords" content="admin template, Vuesax admin template, dashboard template, flat admin template, responsive admin template, web app">
+    <meta name="author" content="PIXINVENT">
+    <title>Dashboard Analytics</title>
+    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/tether-theme-arrows.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/tether.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/shepherd-theme-default.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/dashboard-analytics.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/card-analytics.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/tour/tour.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<style>
+    .switch {
+  position: relative;
+  display: inline-block;
+  width: 41px;
+  height: 18px;
+}
+
+/* Hide default HTML checkbox */
+.switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+/* The slider */
+.slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+.slider:before {
+  position: absolute;
+  content: "";
+  height: 14px;
+  width: 14px;
+  left: 0px;
+  right: 0px;
+  bottom: 2px;
+  background-color: white;
+  -webkit-transition: .4s;
+  transition: .4s;
+}
+
+input:checked + .slider {
+  background-color: #7AEF1F;
+}
+
+input:focus + .slider {
+  box-shadow: 0 0 1px #7AEF1F;
+}
+
+input:checked + .slider:before {
+  -webkit-transform: translateX(26px);
+  -ms-transform: translateX(26px);
+  transform: translateX(26px);
+}
+
+/* Rounded sliders */
+.slider.round {
+  border-radius: 34px;
+}
+
+.slider.round:before {
+  border-radius: 50%;
+}
+
+</style>
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
+                        <div class="brand-logo"></div>
+                        <h2 class="brand-text mb-0">GlobalTopad</h2>
+                    </a></li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item"><a href="index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2"></span></a>
+                    <ul class="menu-content">
+                        <li class="active"><a href="index.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="page-user-profile.html"><i class="feather icon-user"></i><span class="menu-title" data-i18n="UserProfile">Profile</span><span class="badge badge badge-warning badge-pill float-right mr-2"></span></a>
+                    <li class=" nav-item"><a href="user-transactions.html"><i class="feather icon-user"></i><span class="menu-title" data-i18n="UserTransactions">Transactions </span><span class="badge badge badge-warning badge-pill float-right mr-2"></span></a>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+
+        <div class="content-overlay"></div>
+        <div class="header-navbar-shadow"></div>
+        <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+            <div class="navbar-wrapper">
+                <div class="navbar-container content">
+                    <div class="navbar-collapse" id="navbar-mobile">
+                        <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
+                            </ul>
+                            <ul class="nav navbar-nav">
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a>
+                                    <div class="bookmark-input search-input">
+                                        <div class="bookmark-input-icon"><i class="feather icon-search primary"></i></div>
+                                        <input class="form-control input" type="text" placeholder="Explore GlobalTopad" tabindex="0" data-search="template-list" />
+                                        <ul class="search-list"></ul>
+                                    </div>
+                                    <!-- select.bookmark-select-->
+                                    <!--   option Chat-->
+                                    <!--   option email-->
+                                    <!--   option todo-->
+                                    <!--   option Calendar-->
+                                </li>
+                            </ul>
+                        </div>
+                        <ul class="nav navbar-nav float-right">
+                            <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
+                                <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a></div>
+                            </li>
+                            <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
+                            <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                                <div class="search-input">
+                                    <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                    <input class="input" type="text" placeholder="Explore GlobalTopad" tabindex="-1" data-search="template-list" />
+                                    <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                    <ul class="search-list"></ul>
+                                </div>
+                            </li>
+                            <!-- <li class="dropdown dropdown-notification nav-item"><a class="nav-link nav-link-label" href="#" data-toggle="dropdown"><i class="ficon feather icon-bell"></i><span class="badge badge-pill badge-primary badge-up">5</span></a>
+                                <ul class="dropdown-menu dropdown-menu-media dropdown-menu-right">
+                                    <li class="dropdown-menu-header">
+                                        <div class="dropdown-header m-0 p-2">
+                                            <h3 class="white">5 New</h3><span class="notification-title">App Notifications</span>
+                                        </div>
+                                    </li>
+                                    <li class="scrollable-container media-list"><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                            <div class="media d-flex align-items-start">
+                                                <div class="media-left"><i class="feather icon-plus-square font-medium-5 primary"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="primary media-heading">You have new order!</h6><small class="notification-text"> Are your going to meet me tonight?</small>
+                                                </div><small>
+                                                    <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">9 hours ago</time></small>
+                                            </div>
+                                        </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                            <div class="media d-flex align-items-start">
+                                                <div class="media-left"><i class="feather icon-download-cloud font-medium-5 success"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="success media-heading red darken-1">99% Server load</h6><small class="notification-text">You got new order of goods.</small>
+                                                </div><small>
+                                                    <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">5 hour ago</time></small>
+                                            </div>
+                                        </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                            <div class="media d-flex align-items-start">
+                                                <div class="media-left"><i class="feather icon-alert-triangle font-medium-5 danger"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="danger media-heading yellow darken-3">Warning notifixation</h6><small class="notification-text">Server have 99% CPU usage.</small>
+                                                </div><small>
+                                                    <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Today</time></small>
+                                            </div>
+                                        </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                            <div class="media d-flex align-items-start">
+                                                <div class="media-left"><i class="feather icon-check-circle font-medium-5 info"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="info media-heading">Complete the task</h6><small class="notification-text">Cake sesame snaps cupcake</small>
+                                                </div><small>
+                                                    <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last week</time></small>
+                                            </div>
+                                        </a><a class="d-flex justify-content-between" href="javascript:void(0)">
+                                            <div class="media d-flex align-items-start">
+                                                <div class="media-left"><i class="feather icon-file font-medium-5 warning"></i></div>
+                                                <div class="media-body">
+                                                    <h6 class="warning media-heading">Generate monthly report</h6><small class="notification-text">Chocolate cake oat cake tiramisu marzipan</small>
+                                                </div><small>
+                                                    <time class="media-meta" datetime="2015-06-11T18:29:20+08:00">Last month</time></small>
+                                            </div>
+                                        </a></li>
+                                    <li class="dropdown-menu-footer"><a class="dropdown-item p-1 text-center" href="javascript:void(0)">Read all notifications</a></li>
+                                </ul>
+                            </li> -->
+                            <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                    <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.png" alt="avatar" height="40" width="40" /></span>
+                                </a>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="page-user-profile.html"><i class="feather icon-user"></i> Edit Profile</a>
+                                    <div class="dropdown-divider"></div><a class="dropdown-item" href="auth-login.html"><i class="feather icon-power"></i> Logout</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <!-- END: Header-->
+
+
+        <div class="content-wrapper">
+            <div class="content-header row">
+                <div class="content-header-left col-md-9 col-12 mb-2">
+                    <div class="row breadcrumbs-top">
+                        <div class="col-12">
+                            <h2 class="content-header-title float-left mb-0">Profile</h2>
+                            <div class="breadcrumb-wrapper col-12">
+                                <ol class="breadcrumb">
+                                    <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#">Pages</a>
+                                    </li>
+                                    <li class="breadcrumb-item active">Profile
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                    <div class="form-group breadcrum-right">
+                        <div class="dropdown">
+                            <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-settings"></i></button>
+                            <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Chat</a><a class="dropdown-item" href="#">Email</a><a class="dropdown-item" href="#">Calendar</a></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content-body">
+                
+                <div id="user-profile " >
+                    <div class="row p-1">
+                        <div class="card  col-md-12 ">
+                            <div class="row no-gutters card-body" style="height: 25rem;">
+                                <div class="col-sm-12 col-4 col-md-4 text-center border-right">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOEAAADhCAMAAAAJbSJIAAABTVBMVEX17uX////yzqXmpCJrNj7ZjCHmwZzMdR/UsIz17uS7hmDLchWjcF/YihcmJib07ePMmHL38uv206i0hW7lnwBoMTr7+PT8+vfmohZmLTb069vz0KpiJTDpwpr28u7vyqEACBXjtoNgICvjnyLXr4TcuJPv0qTnpynXhQDckSHCkGnfto4VGh7KbwvSrov89+3o4eKuk5Ly4MHqt1zpslDswnvorUHt07DxyZfvw4fclS7Nnnjfomjkr3rmsHAcHiG1m35rXlBcUkbQfzDBlHro2M5zPkF3SVDFsazQwL9cFSO5oZ+OZ2h+TU2Xd3vazczdmUDhqF3uv33qs1jsuWvgnkvsw33ZllY7NzLjqWCwl3vTh0FpXE6NemTotHbMooTdp3XgvKXOkGHLhDKycTeMUTmrZDbBcjGWXkLiy7thLD+RbXOLYF6jiIySZV13eunqAAAS8UlEQVR4nM2d+XfTxhbH7eA4NnmukYnXyDKYODvZCCFLISyNszhxoECBtpTyXtv3gND//8c3kmxLGt1Z7tWE9HtOe0giWfrorjMjyan05atarVQciyk1lPuDU6lUv8HB06lL/fRqhWEViy5UPhWV9zP7k2VVqpdKelmEHhsAFpe3BbPoZWFeCmHFYuetZoty5lNW5TJOxjhhlbklki6gZE5r3JRmCSsW1nZxStOmNEjIfDMh3qVAmiKsGsILIE25qxnCilU0hzeALBoypAlCS32+RDkGzi4xYdUybb2w8smdNSFh1bx7cojFpIyJCBnfpeL5SsiYgLBqGcyeMuUTJVY64bfi8xnpOYdKWPmGfL6otYNGWL28AiEW0VVJhFfB5zF+I8LqFfG5IpgRT/hNKoRIRbwZsYRXaUBfWDMiCZ2r5kuhm1Uc4VWlmKhwSRVDWM0nrYGRKUWy8ihPRRBWkoA5jtNobHhq5NkPCUkR5V+fkHhKjC6/Mbtzb6sWaG7z/uxGMZE99XOqNiERr/FgZ7M2NVWrXQuLUU5Nbe5sFB06pGHCKqENtZyN2XvXeLgw5tTW/Q2qIbWDUY+wiuaznMYsM56ILqDcmiU7qx6iFmEF28ZYqY17U0o8n3GqNlukMRa18o0OIRbQys9u6uH5mpqbTZEYtRA1CJGAlvVgC8PnMW5ukLolHUQ1IfLQzgbKfgPVaju0cFS3cEpCB2VBK/8Tgc8z41aDglhUIqoIcY2Ms7E1ReJzzTi3QbKiylEVhLgYdGaFxU+LcZYSjKpYlBPiAK37ZAP6mtq+BEQpYRUDaDXuJQR0EUmxKC39MkJUJ2M1NpN46BBxlhSLMkQZIeYYVmPLACBDpKUbGiGq2S6aAWTphjLRlZdhCP+Cupb5e4YAr9VekYwoHi8KCVGF0HplCpAhGi6LIkLUrKGznTiLhgjv0yb0RNlGRIhKoxsGAZkeNBpFQpcqQBQQopauG3NGARfmC4Xn77axo/+8IBRhQtRnmwzCa9fujLsqFOYLz1tIRrgJBwlRQWjNmvRRH9CnnF94gEME/RQkRH1sw7wFR5p/gRtS6RKiPtQx6aMcILPjLqp2QKEIEOL6baN5lAd0AxLjqVAPDhAi+JhMdWswoOupqGDUIcTlUZNpZgEkHJ/HOGrcT2OEuCXQvEETCgBZLGLCJuanMcIrM2EsywSIj5L4Kf8L3MyTZa6bEQMiQ5FvwXlCHOADcyYU+ahnxOeYJlJOiLuV0jExcaEGZEYcQxjRkRHi0oy1obf2Urs2t7W1ubU1N1cTzTbKfNSzIiYSqxJCpAnvqwlrta17O9tj057Gtn98OQdCKgBRkcgNMiKEyJtl1KOmWu3lztj0WCBGufPyWoxR7qOuDV9jhsVVISHOhOo8U9vcDuMNKcdecYwqH3URN/RPLGrEMCGqIWWEitmn2twOwAcxKk3I3LRJbU/DhMiJA8WwqbY5JgB0GbdDaVjDhOOFF9QxRogQa0J5P1N7JebzGH8cbaoByBAbiHMLGzFEiHyswJE6ae1HOSBDbA16Wg0fHUf23+FIDBFi77eQmVAN6OplLWLCgtSGtzFumocIkVEozaQqFx2a0XUD14SFQmFh9/Xr188X2L8EhO9wUw8AIQ4w5fwkdlJNQIbIrMiYXj/aabk/sf9aO+8WYMYFnI/FCbH35VlbYsBNTUDXiruvd9xuJ/Sr6Z3nEOM8jrASI8TOMTfEPjqny+fxTMcvx/RvSVNNqGAMCZGlQhaGNVGhR3Bv78bMiBpfhArGkBD7BJo4DGv3EgO6iiGiuppQwRgS4viYDV+KCDE+KkXkkymOcJRrUrQ8Ix5X6FVCtaa3OSPiZmtSo1yTojlpSjgRvGUGkCE+iiLiOtPATVNEJxU1pbVtQ4BjMT99jl05DROindTagcOw9tKUCZl2okbcxRJWQoRoJxWNDU2lGU/Tu4kIB27qE+Jv4oYTjak0M9BvhUQ2TAWE+IeZimAYIto1Pe0mI6yOCB20DQWp1GCacTUdMSKa0HfTFCWTCno2wz7qajeRDVMjQvSNVmCxMJpHfUVrIhqwOCTEP9AEFgujeXSokBEL6NP06kWKUivgxftgbrTUajaXPDVbCoLSGNt0hsndtlTi/xw2Ip7QC8QUJQyhWaggCJszezdC2lsSUpbGlvYWrwdanGlyjNPfJyH0pmtSlEd+Uk5sgD8aMy3diGuvCfI1967HtLjEEU4aICQ8V+jwBX9YCZsAn6uZuB1bAJ/HGN50+k0iQjcQU5QwTDk84NbotAWIN5Y4wCWY7/r1vYgNf5mcSGJDyyfE72lxYTg3uu4tP/SaLe83LZZFQMTSEHBxb5CN3E3dmFyMeukvExMTCWzoExJ2zNcEgK6f8pmluRdHnBnYK5pZSq29xejO08+SEaaohNFFmTlFs1byo3OGd9FFPnO6jNwvJiZGiGRCyjsEooTQIiGnvYgJW/GAE6g1ESCSCKuMkPKIdpjwzrhOvx0uGKU9XcCx7ckAkURYYYSUN1k1wot/BSFhzAkHhrnOZRTBdky3B4QTREKWTFOkp9ADwgV3VUiAl1vJgufumTBw2lJ2JSeCfDgknCDa0CWk7Dci9BaOHoGAj98uL+8/gf7kmTBAerK/vPz2MYjIWpqJkUiEjA8/dAoIB/dkvwMyTenxre+Ylp/G/9SMmvDpMttu/xaIyFqagHCS9M6KdAq7YBEQ3hks3hZeQ7n07Xeebv3Mn3nJq4XDqlD62bsS3+2/BW34y0RCwiIjJOzmEt4JFqefA+fW8U/8u/0nMdvcCOeZ0pP9waXoAJ/SepaUkPGR3ufRqEUW34Hh0cqQ8NcY4WKkVPw6JFwBCLcnEhNWaIT5yDQfVC6yy/6JL7/nCb1aMepvSu+HG0KjyO27BghJDxlxhMCC4fDM92POxyWazrLgSrh6OJmY0EmRXl3JET4CUk3r6a39/WUgRXqEQYfDku7y/v6tp5AJI8WCRpi3aK9r4AhfQMm09PjJ0/dAyecIWcF///QJXA7H3vxDCMd3wda7VIrPLAGEwg2ZwqmU6KVmCAvw+cGKEwrVmjRBSBJPiJnNRxDevvuPIfwNQdjSJowmGiIhUTwh1JlKCfl5KZjwzT+GcPw5ZsViMVzxpYSRREMmJO3GE0J9m1BuX3pDZ8PWXSOEJPGEgkEwKH9sobPlbROEVMPH7nVBuOmSZqrhEs0V2xAcIgrU0pyHigwOr5pwfBcRiKUbem7amjBDaKKnQdb8Jb16cXvSBKGZrg1Z88f42URQfBheNSE4vBBp77pGSXSXncwQJh8fekIADmb1FaHLhyF99GSGEBWIfklUVH2uGlIJHRPzNOiKqNObxsLwKmeiPKFaU5ZOF1vi1QpPXDWkE5LmSwHCAqY1ZYiqDVq8k5LnS40RouqFWg95JyXOeVdp6xYQIaZxUytWK+iz+qS1J4AQ1bhpKAZIXpkhrR9ChIUdk4B8y0YltIhrwCAhqq1RiJvAIBN6a8CUaX2IENfWKBRraKg2rBDvVAAJoeULqh7GagWRsEq82wQmNJhNASelE5LuiQK9FDX1LVULAKQRUu9rExCaKvrT8XJPJPTva8PfqS8gRPamEsJnACCFcHBvIiHVCAglQ6gSIOHGsYET2YYV6j3CIkJhSczdBATdm+CZEMozNBtWqfd5CwjHRbe4lX74F6AfBITbICDJhuR79UWEwiWaHEQomBWOj32phKN79fGBKLShcAHjZhzwg+jGPpCPZMPh8xb426KEhEIjdmKANwXXQmRCAuHomRn8w3liG4qG+qUPPKDI2mC1J3rpiBAdiBJCUTrlko0QUJBIKYShZ9fQgSgmZDVRVDHCVhSlUe42qIQ2DJ4/RLuphBC8j8+3YnaYbm7Cd9Z6ik2xJSAMPwdskFCyqF9qdT58+NCRzCMK0wyBMPIcMNZNZYTj87LVT1mzNgZOXtBtGH6WG9vWSAkLWrchwBLzEQij71QwSihqOJWaEaYZPCH3TgWkmyoIV4iIHZOE3HsxkG6qIMzlSIjZFaOE6SghrugrCSlWzK7kDBLG3k+D602VhAQrMkCThLF3DOHcVE54O0dA7Lj7GCSMvScKl2sUhN7Z5nKYhQx/lxlJOUQSxt/1hTKigjDrne5KTu8uUqaWf0ly8AQNiTAdJ0S9tE9B6CNq55vB5rmsOULonXuYuW8l4cBP2UlrGHC4ccccIfjeREzBUBIGiB1VNAZbZo0RCt59iSgYasIAcUXKOHRQD9AYoeD9pYhI1CAMENnJC1JOK5uLABojFLyDFmFEHcIwIuiszfAGHqApQuF7hPUjUTE+zAKILkQrZL0O9zdPTSOE4ndB66dTKeFuNgsj5lZWcp1OttPpsH+sAIDZLLgkg7ah+H3e2kaUz2JkA+W0FGwvmcTQJpS9k13biFIbLmVxiJ3Q5ksmZjFk79XXTaey2cRH2Yh4T5UCZrO/iyNRk5D/7i7+2yA0P0UyI5zlJWXs8Fu/STxfmpYT6g0xJOsWMUAZY4xPhqhJqPqOEj0/Fa2Qjj+EAEWMEJ/rqBOJVtd4INp3BcF3m4y/aMLnDDF2BHxMzTcgox6h+ruCtIwI3CNc2H23JDznIWVHSedr6c2zu7R7EzW+70kr2XDPAc/PF17fVuEh9fubybt38U/nxXFo37sWEDK68e+zB4bxfB18/PdEiFKHUO971zT8dEhY2P2+c+B9zCUAesvTjPLZpDah5nfnaUzZuISFhf/88ef6cJcDSZIhqXkw/OjjP//6r5t6NAhBGOiXqnxqrRbG//hfN/O5/mW0zyeziM1Po0/u2eVM98+/nt1dVTmX/ndYSv10NV88Wu9+/lzOZDLlw2Afo4ghwPQX90iZz5+760fF/KrkzBDfQyocZKyuHhyvX9h2PTNQfS3Y56M5xObH0LkclocHs+2L9eODVZgS912yUChaq0VGl7HrwwO6ah8Hu1Q/GiP8GPK3tXroeOW6nWGURchhRSSC31c5utSn3kU9Sudd1q/hfVSFXFedcEAd2dwxGWX5onee4iix3+kchCKz3UGvX2/H6DJcIKbTjiHCSED169Bx2fn0ewfFwGPR38vtI1qr+YOj/iFM57vpWngfM4gRwKroyJmy3T7rHx3kPVsSvludIa66dIBrhmX3Ivs4Bhw1mhLP25KjM4etHzLKVTGgjNDptuV03jEOoztVE2bUSBZ19RVyUo6y3YULhYowfc7HOKSTNW6vRIjhOuhL5xzscwmFjDB9fKL+9Po6v1eC0h8HPJY56fAiH/N7aROmexqfn4ntRe5Rg150pAtVmLBkdyRlkBOynlB5ADt+BdeyFMZmlnd49kkax+/F9sIQpteVhyifxvdyCMHY/AikC2WeybRjUYIkTH9VOioY5wfKKQ1OS3EPZSZU+qgSUE2oRgwNoULCmRE0oIYHqQE1CNWHiRUMXwfa0djMQgZkV0l1ZFsNqEOozKhQJHonqFk3lj4JCrYqCtuKJKNNmO4p6mJbVHEZowqy2RTxpR3FYU/kZQJDmD62pSHPt24RRqmvNrNCPsGoIjgoUKbohOnzjBTRllxN5+CjwJDN5scDSUMpbxrLGVmrhidMr3VlF7SckZypC7nSbHF4reyKDC8dmr2AVO/C6Y1OmK6eyi5pZKwf19d69++bH4KRVefDzb+79S9SQmk7ZZ+KhvQxaROyqiFLqScSnzk/ZCdbdsdy3bOzi7OzLvuXOyyr1yWRtCY7mkYZpBCmjyWjxXJXeFF7oTRVdhU6U7HpTyXHkl2ZRITptTOx54j8tPpFZgz7UBBOEh+1z3RDEE/otnDiGRvwwq5l5FVbkPPFY4oyxkMJhOljcU4tA5f2SHxFhjoBjF8V5tF6F+OhFMK00xd5HVD31QOTjJsXYzm1LzJhuy+vMCYI3YkFgRltzhrOhc4kC7NLhrO+qBGuw5FgnJCZUdDERTvhc3mrF1I52mEKJhDLdl847WuYkJ2DIKmGB8MaIRi6NiHzr8Edon2m2aYZIUxXe6CrloO1qK96Hjo6/y/DeuqAWabe7ml3MUYIvYwDnEm57GcCeY8HaRSMh8ClKxMyTGJC5qqnQKCVD91TWYNOU6FBZfwS37Nsn6JqvDFClzFuxzpDPC8jQjCQOy8YrxPl9iktAE0QMsaLk9iS4mFPO4lyan+NAZZPLhLxJSb0fJXzqzLeQ4eqc7vW7WT2M0LIgu5rmWo0qdinfk0QfwYJWV7tHYr6HLLq7cMeOX+GZYSQ6bzfNmjIst3uJ3bPgUwRMkMendaNQJbt+ukRpT+DZY6Qae3o1ObzDlJ12z49MhB9gYwSMjnH/TrVX5lv1vvHRoIvJNOErtZ6pxlbfQtABI7ZLmPYeANdBqGr86P+hXung/pWh3rdbmcu+pdC5+qyCF05a0fr/bP6Sdt2LRrp5Mru5KJtt0/qZ/31ozXTnhnWZRL6qjrnx0e99f7p2Vm322V07P9nZ6f99d7R8ZpDHBIh9H/GqxEyyMxu/AAAAABJRU5ErkJggg==" alt="" class="rounded-pill mx-auto d-block mt-2" width="100" height="100">
+                                        <button class="btn btn-sm mt-2 mb-2 btn-info"> Change Profile Image</button>
+                                        <div class="mt-1">
+                                            <h5 class="mb-2"> Abigail John</h5>
+                                            <p class="mb-2" > Level 2</p>
+                                            <div class="progress progress-bar-primary mt-25 m-2">
+                                                <div class="progress-bar" role="progressbar" style="width: 50%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
+                                            </div>
+                                        </div>
+                                </div>
+
+                                        <div class="col-md-8">
+                                            <div class="card-body">
+                                                <div class="userinfo border-bottom">
+                                                    <p class="text-muted"> User profile</p>
+                                                    <div class="more-info row ">
+                                                        <p class="mr-auto ml-1 "> Gender: <span class="font-weight-bold"> Female </span></p>
+                                                        <p class=""> Date of registration: <span class="font-weight-bold"> 12/03/2019 </span></p>
+                                                        <p class="ml-auto"> Phone number: <span class="font-weight-bold">0818765384 </span></p>
+                                                    </div>
+                                                </div>
+                        
+                                                <div class="user-plan mt-2 border-bottom">
+                                                    <p class="text-muted"> Current Plan</p>
+                                                        <div class="levels row">
+                                                            <p class="text-capitalize ml-1"> Level 2 </p>
+                                                            <label class="switch ml-5">
+                                                                <input type="checkbox" >
+                                                                <span class="slider round"></span>
+                                                              </label>
+                                                            
+                                                            <button class="btn btn-sm ml-3  btn-info" style="position: relative; top: -1em"> Upgrade</button>
+                                                        </div>
+                                            
+                                                </div>
+                        
+                                                 <div class="user-plan mt-2 border-bottom">
+                                                    <p class="text-muted"> Payment Detail</p>
+                                                        <div class="levels ml-0 row">
+                                                    
+                                                            <p class="mr-auto "> Account Name: <span class="font-weight-bold"> Abigail John </span></p>
+                                                            <p class="mx-auto"> Bank Name: <span class="font-weight-bold"> GTB Bank </span></p>
+                                                            <p class="ml-auto"> Account number: <span class="font-weight-bold">44334523453</span></p>
+                        
+                                                        </div>
+                                                        <button class="btn btn-sm mb-1 btn-info " > Edit</button>
+                                                        
+                                                </div>
+                                            </div>
+                                        </div>
+                        
+                        
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                
+                        
+                <div class="row" id="table-hover-row" >
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-header">
+                                <h4 class="card-title">Latest Activities</h4>
+                            </div>
+                            <div class="card-content">
+                                <div class="card-body">
+                                Here are your latest transaction activities.
+                                </div>
+                                <div class="table-responsive">
+                                    <table class="table table-hover mb-0">
+                                        <thead>
+                                            <tr>
+                                                <th>Type Notification</th>
+                                                <th>Time</th>
+                                                <th>Status</th>
+                                                <th>Descriptions</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                            <tr>
+                                                <th>Withdrawal Request</th>
+                                                <td>27/02/2017</td>
+                                                <td><button class="btn btn-sm btn-success"> Done</button></td>
+                                                <td>Money Withdrawn</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Withdrawal Request</th>
+                                                <td>27/02/2017</td>
+                                                <td><button class="btn btn-sm btn-warning"> Pending</button></td>
+                                                <td>Money Withdrawn</td>
+                                            </tr>
+                                            <tr>
+                                                <th>Withdrawal Request</th>
+                                                <td>27/02/2017</td>
+                                                <td><button class="btn btn-sm btn-danger"> Declined</button></td>
+                                                <td>Money Withdrawn</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+       
+            </div>
+            
+            
+        </div>
+        
+    </div>
+    <!-- END: Content-->
+
+    <div class="sidenav-overlay"></div>
+    <div class="drag-target"></div>
+
+    <!-- END: Footer-->
+
+
+    <!-- BEGIN: Vendor JS-->
+    <script src="../../../app-assets/vendors/js/vendors.min.js"></script>
+    <!-- BEGIN Vendor JS-->
+
+    <!-- BEGIN: Page Vendor JS-->
+    <!-- END: Page Vendor JS-->
+
+    <!-- BEGIN: Theme JS-->
+    <script src="../../../app-assets/js/core/app-menu.js"></script>
+    <script src="../../../app-assets/js/core/app.js"></script>
+    <script src="../../../app-assets/js/scripts/components.js"></script>
+    <!-- END: Theme JS-->
+
+    <!-- BEGIN: Page JS-->
+    <script src="../../../app-assets/js/scripts/pages/user-profile.js"></script>
+    <!-- END: Page JS-->
+
+</body>
+<!-- END: Body-->
+
+</html>
