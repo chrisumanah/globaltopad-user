@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html class="loading" lang="en" data-textdirection="ltr">
+<!-- BEGIN: Head-->
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=0, minimal-ui">
+    <meta name="description" content="Admin Dashboard GlobalTopad">
+    <meta name="keywords" content="global topad dashboard">
+    <meta name="author">
+    <title>User Settings </title>
+    <link rel="apple-touch-icon" href="../../../app-assets/images/ico/apple-icon-120.png">
+    <link rel="shortcut icon" type="image/x-icon" href="../../../app-assets/images/ico/favicon.ico">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600" rel="stylesheet">
+
+    <!-- BEGIN: Vendor CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/vendors.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/charts/apexcharts.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/tether-theme-arrows.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/tether.min.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/vendors/css/extensions/shepherd-theme-default.css">
+    <!-- END: Vendor CSS-->
+
+    <!-- BEGIN: Theme CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/bootstrap-extended.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/colors.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/components.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/dark-layout.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/themes/semi-dark-layout.css">
+
+    <!-- BEGIN: Page CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/menu/menu-types/vertical-menu.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/core/colors/palette-gradient.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/dashboard-analytics.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/pages/card-analytics.css">
+    <link rel="stylesheet" type="text/css" href="../../../app-assets/css/plugins/tour/tour.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+    <!-- END: Page CSS-->
+
+    <!-- BEGIN: Custom CSS-->
+    <link rel="stylesheet" type="text/css" href="../../../assets/css/style.css">
+    <!-- END: Custom CSS-->
+
+</head>
+<!-- END: Head-->
+
+<style>
+    @media (max-width: 600px){
+        .breadcrumb-wrapper{
+            display: none;
+        }
+      
+    }
+    .col-sm-12{
+        margin-bottom: .75em;
+    }
+</style>
+
+<!-- BEGIN: Body-->
+
+<body class="vertical-layout vertical-menu-modern 2-columns  navbar-floating footer-static  " data-open="click" data-menu="vertical-menu-modern" data-col="2-columns">
+
+    <!-- BEGIN: Main Menu-->
+    <!-- BEGIN: Main Menu-->
+    <div class="main-menu menu-fixed menu-light menu-accordion menu-shadow" data-scroll-to-active="true">
+        <div class="navbar-header">
+            <ul class="nav navbar-nav flex-row">
+                <li class="nav-item mr-auto"><a class="navbar-brand" href="../../../html/ltr/vertical-menu-template/index.html">
+                        <div class="brand-logo"></div>
+                        <h2 class="brand-text mb-0">GlobalTopad</h2>
+                    </a></li>
+                <li class="nav-item nav-toggle"><a class="nav-link modern-nav-toggle pr-0" data-toggle="collapse"><i class="feather icon-x d-block d-xl-none font-medium-4 primary toggle-icon"></i><i class="toggle-icon feather icon-disc font-medium-4 d-none d-xl-block collapse-toggle-icon primary" data-ticon="icon-disc"></i></a></li>
+            </ul>
+        </div>
+        <div class="shadow-bottom"></div>
+        <div class="main-menu-content">
+            <ul class="navigation navigation-main" id="main-menu-navigation" data-menu="menu-navigation">
+                <li class=" nav-item"><a href="index.html"><i class="feather icon-home"></i><span class="menu-title" data-i18n="Dashboard">Dashboard</span><span class="badge badge badge-warning badge-pill float-right mr-2"></span></a>
+                    <ul class="menu-content">
+                        <li class="active"><a href="index.html"><i class="feather icon-circle"></i><span class="menu-item" data-i18n="Analytics">Analytics</span></a>
+                        </li>
+                    </ul>
+                </li>
+                <li class=" nav-item"><a href="page-user-profile.html"><i class="feather icon-user"></i><span class="menu-title" data-i18n="UserProfile">Profile</span><span class="badge badge badge-warning badge-pill float-right mr-2"></span></a>
+                    <li class=" nav-item"><a href="user-transactions.html"><i class="feather icon-user"></i><span class="menu-title" data-i18n="UserTransactions">Transactions </span><span class="badge badge badge-warning badge-pill float-right mr-2"></span></a>
+        </div>
+    </div>
+    <!-- END: Main Menu-->
+
+    <!-- BEGIN: Content-->
+    <div class="app-content content">
+
+        <!-- BEGIN: Header-->
+        <div class="content-overlay"></div>
+            <div class="header-navbar-shadow"></div>
+            <nav class="header-navbar navbar-expand-lg navbar navbar-with-menu floating-nav navbar-light navbar-shadow">
+                <div class="navbar-wrapper">
+                    <div class="navbar-container content">
+                        <div class="navbar-collapse" id="navbar-mobile">
+                            <div class="mr-auto float-left bookmark-wrapper d-flex align-items-center">
+                                <ul class="nav navbar-nav">
+                                    <li class="nav-item mobile-menu d-xl-none mr-auto"><a class="nav-link nav-menu-main menu-toggle hidden-xs" href="#"><i class="ficon feather icon-menu"></i></a></li>
+                                </ul>
+                                <ul class="nav navbar-nav">
+                                    <li class="nav-item d-none d-lg-block"><a class="nav-link bookmark-star"><i class="ficon feather icon-star warning"></i></a>
+                                        <div class="bookmark-input search-input">
+                                            <div class="bookmark-input-icon"><i class="feather icon-search primary"></i></div>
+                                            <input class="form-control input" type="text" placeholder="Explore GlobalTopad" tabindex="0" data-search="template-list" />
+                                            <ul class="search-list"></ul>
+                                        </div>
+                                      
+                                    </li>
+                                </ul>
+                            </div>
+                            <ul class="nav navbar-nav float-right">
+                                <li class="dropdown dropdown-language nav-item"><a class="dropdown-toggle nav-link" id="dropdown-flag" href="#" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="flag-icon flag-icon-us"></i><span class="selected-language">English</span></a>
+                                    <div class="dropdown-menu" aria-labelledby="dropdown-flag"><a class="dropdown-item" href="#" data-language="en"><i class="flag-icon flag-icon-us"></i> English</a></div>
+                                </li>
+                                <li class="nav-item d-none d-lg-block"><a class="nav-link nav-link-expand"><i class="ficon feather icon-maximize"></i></a></li>
+                                <li class="nav-item nav-search"><a class="nav-link nav-link-search"><i class="ficon feather icon-search"></i></a>
+                                    <div class="search-input">
+                                        <div class="search-input-icon"><i class="feather icon-search primary"></i></div>
+                                        <input class="input" type="text" placeholder="Explore GlobalTopad" tabindex="-1" data-search="template-list" />
+                                        <div class="search-input-close"><i class="feather icon-x"></i></div>
+                                        <ul class="search-list"></ul>
+                                    </div>
+                                </li>
+                                <li class="dropdown dropdown-user nav-item"><a class="dropdown-toggle nav-link dropdown-user-link" href="#" data-toggle="dropdown">
+                                        <div class="user-nav d-sm-flex d-none"><span class="user-name text-bold-600">John Doe</span><span class="user-status">Available</span></div><span><img class="round" src="../../../app-assets/images/portrait/small/avatar-s-11.png" alt="avatar" height="40" width="40" /></span>
+                                    </a>
+                                    <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="page-user-profile.html"><i class="feather icon-user"></i> Edit Profile</a>
+                                        <div class="dropdown-divider"></div><a class="dropdown-item" href="auth-login.html"><i class="feather icon-power"></i> Logout</a>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+
+            <div class="content-wrapper">
+                <div class="content-header row">
+                    <div class="content-header-left col-md-9 col-12 mb-2">
+                        <div class="row breadcrumbs-top">
+                            <div class="col-md-12">
+                                <h2 class="content-header-title float-left mb-0">User Settings</h2>
+                                <div class="breadcrumb-wrapper col-12">
+                                    <ol class="breadcrumb">
+                                        <li class="breadcrumb-item"><a href="index.html">Home</a>
+                                        </li>
+                                        <!-- <li class="breadcrumb-item"><a href="#">Pages</a> -->
+                                        </li>
+                                        <li class="breadcrumb-item active">User Settings
+                                        </li>
+                                    </ol>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="content-header-right text-md-right col-md-3 col-12 d-md-block d-none">
+                        <div class="form-group breadcrum-right">
+                            <div class="dropdown">
+                                <button class="btn-icon btn btn-primary btn-round btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"><i class="feather icon-settings"></i></button>
+                                <div class="dropdown-menu dropdown-menu-right"><a class="dropdown-item" href="#">Chat</a><a class="dropdown-item" href="#">Email</a><a class="dropdown-item" href="#">Calendar</a></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-body">
+                    <!--Settings-begins -->
+                    <section>
+                        <!-- Account-begins -->
+                        <div class="settings-account">
+                            <!-- <h6 class="mb-1">Account</h6> -->
+                          
+                              
+                          
+                            <div class="card">
+                                <div class="card-header">
+                                    <h4> Account Details</h4>
+                                </div>
+
+                                <div class="card-body">
+                                    <div class="form ml-0">
+                                        <form action="" class="row" >
+                                            <div class="col-md-6 col-sm-12">
+                                                <label for=""> First Name </label>
+                                                    <input type="text" placeholder="Tommy " class="form-control">
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12">
+                                                <label for=""> Lastname </label>
+                                                    <input type="text" placeholder=" Sicillia" class="form-control">
+                                            </div>
+
+                                            
+                                            <div class="col-md-6 col-sm-12 mt-1">
+                                                <label for=""> Email </label>
+                                                    <input type="email" placeholder="abigailjohn@gmail.com"  class="form-control">
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12 mt-1">
+                                                <label for=""> Gender </label>
+                                                <select name="" id="" class="form-control">
+                                                    <option value=""> Female</option>
+                                                    <option value=""> Male</option>
+                                                    <option value="">Other</option>
+                                                    <option value="">Non Binary</option>
+                                                    <!-- <option value=""</option> -->
+                                                </select>
+                                            </div>
+                                            <div class="col-md-6 col-sm-12 mt-1">
+                                                <label for=""> Phone Number </label>
+                                                    <input type="tel" placeholder="0908765432" d class="form-control">
+                                            </div>
+
+
+                                            <div class="col-md-6 col-sm-12 mt-1">
+                                                <label for=""> Levels </label>
+                                                    <select name="" id="" class="form-control">
+                                                        <option value=""> Level 1</option>
+                                                        <option value=""> Level 2</option>
+                                                        <option value=""> Level 3</option>
+                                                    </select>
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12 mt-1">
+                                                <label for=""> Account Name </label>
+                                                    <input type="text" placeholder="Abigail John" d class="form-control">
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12 mt-1">
+                                                <label for="">Bank Name </label>
+                                                    <input type="text" placeholder="GTB Bank" d class="form-control">
+                                            </div>
+
+                                            <div class="col-md-6 col-sm-12 mt-1">
+                                                <label for=""> Account Number </label>
+                                                    <input type="tel" placeholder="0908765432" d class="form-control">
+                                            </div>
+
+                                            <div class="mt-3 mr-2 ml-auto">
+                                                <button class="btn  btn-md btn-warning"> Cancel </button>
+                                                <button class="btn btn-facebook"> Save Changes</button>
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="card">
+                                <div class="card-header">
+                                   <div class="card-title">
+                                    <h4> Delete Account</h4>
+                                   </div> 
+                                </div>
+
+                                <div class="card-body">
+                                    <p class="text-warning"> Are you sure you want to delete your account? </p>
+                                    <small class="text-warning"> You can't undo this!</small>
+                                    <button class="btn btn-sm mt-2 btn-block offset-n1 col-md-7 col-sm-12 btn-pinterest "> Yes I want to delete this account</button>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
